@@ -52,3 +52,110 @@ pub fn create_taproot_htlc(
     Ok(config.address)
 }
 
+/// Redeems a Taproot HTLC output by constructing and signing a transaction using the preimage.
+///
+/// This function spends the HTLC via the redeem path, requiring the preimage that matches
+/// the secret hash in the redeem script.
+///
+/// # Arguments
+/// - `htlc_config`: The HTLC configuration containing address, scripts, and root details.
+/// - `preimage`: Hex-encoded preimage matching the secret hash in the redeem script.
+/// - `receiver_private_key`: Hex-encoded private key of the receiver for signing.
+/// - `prev_txid`: Transaction ID of the HTLC funding output.
+/// - `amount`: Amount in the HTLC output (in satoshis).
+/// - `transfer_to_address`: Destination address for the redeemed funds.
+/// - `fee`: Transaction fee to deduct (in satoshis).
+///
+/// # Returns
+/// - `Ok(Transaction)`: The signed transaction ready to broadcast.
+/// - `Err(Error)`: If key parsing, preimage decoding, or signing fails.
+///
+/// # Errors
+/// Returns an `io::Error` if:
+/// - The receiver private key is invalid.
+/// - The preimage hex string is invalid.
+/// - The amount is insufficient to cover the fee.
+/// - Sighash computation fails.
+fn redeem_taproot_htlc(htlc_config:ConfigTaprootHTLC,preimage: &str, receiver_private_key: &str,prev_txid:Txid, amount:Amount, transfer_to_address:&Address) -> Result<Transaction, Error> {
+    let secp = Secp256k1::new();
+
+    // Compute Merkle branch for redeem path (using refund leaf as sibling)
+    let hash_hex = htlc_config.refund_config.refund_leaf.to_string();
+    let hash_bytes: [u8; 32] = hex::decode(hash_hex)
+        .expect("Invalid hex string")
+        .try_into()
+        .expect("Hex string must be 32 bytes");
+    let merkle_branch = TaprootMerkleBranch::decode(&hash_bytes)
+        .map_err(|e: TaprootError| format!("Failed to decode Merkle branch: {}", e))
+        .unwrap();
+
+    // Create control block for Taproot script spend
+    let control_block = ControlBlock {
+        leaf_version: LeafVersion::TapScript,
+        output_key_parity: htlc_config.root_config.parity,
+        internal_key: htlc_config.root_config.internal_key,
+        merkle_branch,
+    };
+
+    // Derive receiver's keypair for signing
+    let receiver_secret_key = SecretKey::from_str(receiver_private_key).expect("Invalid private key");
+    let key_pair = Keypair::from_secret_key(&secp, &receiver_secret_key);
+
+    // Construct a basic transaction
+    let prevout_txid = prev_txid;
+    let prevout = OutPoint::new(prevout_txid, 0);
+    let input = TxIn {
+        previous_output: prevout,
+        script_sig: ScriptBuf::new(),
+        sequence: Sequence::ENABLE_RBF_NO_LOCKTIME,
+        witness: Witness::default(),
+    };
+
+
+    let output = TxOut {
+        value: amount - Amount::from_sat(1000), // 0.001 BTC
+        script_pubkey: transfer_to_address.script_pubkey(),
+    };
+
+    let mut tx = Transaction {
+        version: bitcoin::transaction::Version::TWO,
+        lock_time: bitcoin::locktime::absolute::LockTime::ZERO,
+        input: vec![input],
+        output: vec![output],
+    };
+
+    // Compute Taproot sighash for script spend
+    let mut sighash_cache = SighashCache::new(&tx);
+    let sighash = sighash_cache.taproot_script_spend_signature_hash(
+        0,
+        &bitcoin::sighash::Prevouts::All(&[TxOut {
+            value: amount, // Previous output amount
+            script_pubkey: htlc_config.address.script_pubkey(),
+        }]),
+        TapLeafHash::from_script(&htlc_config.redeem_config.redeem_script, LeafVersion::TapScript),
+        TapSighashType::Default,
+    ).expect("Failed to compute sighash");
+
+    // Sign the transaction with Schnorr
+    let msg = Message::from_digest_slice(&sighash[..]).unwrap();
+    let signature = secp.sign_schnorr_no_aux_rand(&msg, &key_pair);
+
+    let preimage_hex = hex::decode(preimage).unwrap();
+    println!("preimage hex {:?}",preimage_hex);
+    // Construct witness for redeem path
+    let mut witness = Witness::new();
+    witness.push(signature.as_ref());    
+    witness.push(preimage_hex);  
+    witness.push(htlc_config.redeem_config.redeem_script.to_bytes());   
+    witness.push(&control_block.serialize());     
+
+    println!("redeem_taproot_witness {:?}",witness);
+
+    tx.input[0].witness = witness;
+
+    // let tx_hex = bitcoin::consensus::encode::serialize_hex(&tx);
+    // println!("redeem hex : {}",tx_hex);
+    
+    return Ok(tx); // Placeholder return (could return the output address if needed)
+}
+

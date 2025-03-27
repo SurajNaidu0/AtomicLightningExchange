@@ -4489,3 +4489,570 @@
 2025-03-27 07:17:13 DEBUG [lightning::chain::chainmonitor:718] New best block 000001830029a00da35d8a43f05005c99bfbcc3fd8251d739f85d9fe2baa0a4d at height 1970128 provided via best_block_updated
 2025-03-27 07:17:13 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001830029a00da35d8a43f05005c99bfbcc3fd8251d739f85d9fe2baa0a4d in 2490ms: 0 confirmed, 0 unconfirmed.
 2025-03-27 07:17:13 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2491ms.
+2025-03-27 07:17:43 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:17:43 DEBUG [lightning::chain::chainmonitor:718] New best block 0000031a59635c645e9153b8a2dd409c3eec8e510a10495617ee2a39a8dbab27 at height 1970129 provided via best_block_updated
+2025-03-27 07:17:43 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000031a59635c645e9153b8a2dd409c3eec8e510a10495617ee2a39a8dbab27 in 2481ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:17:43 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2481ms.
+2025-03-27 07:18:12 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:18:12 DEBUG [lightning::chain::chainmonitor:718] New best block 000002b977269ee309b5b055aa7ed73f0d03e67b1a9ee6a4256169170cec17ca at height 1970130 provided via best_block_updated
+2025-03-27 07:18:13 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002b977269ee309b5b055aa7ed73f0d03e67b1a9ee6a4256169170cec17ca in 2258ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:18:13 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2258ms.
+2025-03-27 07:18:15 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1595ms.
+2025-03-27 07:18:42 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:18:42 DEBUG [lightning::chain::chainmonitor:718] New best block 00000167a06a1f66dc3e9f7a3db2d8477e05679ec2cd21f1d443219196967cb4 at height 1970131 provided via best_block_updated
+2025-03-27 07:18:43 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000167a06a1f66dc3e9f7a3db2d8477e05679ec2cd21f1d443219196967cb4 in 2243ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:18:43 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2244ms.
+2025-03-27 07:19:12 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:19:12 DEBUG [lightning::chain::chainmonitor:718] New best block 000002413dda5d82f881e3c921b63ca71f1616c57cf87593c8719f7b6d2919e9 at height 1970132 provided via best_block_updated
+2025-03-27 07:19:13 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002413dda5d82f881e3c921b63ca71f1616c57cf87593c8719f7b6d2919e9 in 2296ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:19:13 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2296ms.
+2025-03-27 07:19:32 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1170ms.
+2025-03-27 07:19:42 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:19:42 DEBUG [lightning::chain::chainmonitor:718] New best block 00000273b655939fa570025d6dc0767bf5a9f3bffd461c6a97c3e4030f5bc154 at height 1970133 provided via best_block_updated
+2025-03-27 07:19:43 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000273b655939fa570025d6dc0767bf5a9f3bffd461c6a97c3e4030f5bc154 in 2271ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:19:43 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2272ms.
+2025-03-27 07:20:13 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:20:13 DEBUG [lightning::chain::chainmonitor:718] New best block 00000036a92b563c0bfcaf5f10b9764c70e7debc31d329bc5a3d691890d2471a at height 1970134 provided via best_block_updated
+2025-03-27 07:20:13 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000036a92b563c0bfcaf5f10b9764c70e7debc31d329bc5a3d691890d2471a in 2352ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:20:13 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2353ms.
+2025-03-27 07:20:43 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:20:43 DEBUG [lightning::chain::chainmonitor:718] New best block 0000029edbc9f81cec28eb4bc77aeaa4c13f952d58cd708064c38ef4bff13ee6 at height 1970135 provided via best_block_updated
+2025-03-27 07:20:43 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000029edbc9f81cec28eb4bc77aeaa4c13f952d58cd708064c38ef4bff13ee6 in 2438ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:20:43 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2438ms.
+2025-03-27 07:20:52 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1242ms.
+2025-03-27 07:21:13 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:21:13 DEBUG [lightning::chain::chainmonitor:718] New best block 000001b88aa2c83ef746fa70df52b9ae6fe85a341fc4bfc0e91ba60f982dbe68 at height 1970136 provided via best_block_updated
+2025-03-27 07:21:13 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001b88aa2c83ef746fa70df52b9ae6fe85a341fc4bfc0e91ba60f982dbe68 in 2412ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:21:13 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2413ms.
+2025-03-27 07:21:42 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:21:42 DEBUG [lightning::chain::chainmonitor:718] New best block 000002562e6a9862675351b1515badd31b899e9aa9f0ba48e2c73c74e03502d2 at height 1970137 provided via best_block_updated
+2025-03-27 07:21:43 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002562e6a9862675351b1515badd31b899e9aa9f0ba48e2c73c74e03502d2 in 2269ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:21:43 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2270ms.
+2025-03-27 07:22:12 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:22:12 DEBUG [lightning::chain::chainmonitor:718] New best block 000001e4bdc2ed0027b323f57e0b23e5e673c53823e098c323684b8218df808b at height 1970138 provided via best_block_updated
+2025-03-27 07:22:13 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001e4bdc2ed0027b323f57e0b23e5e673c53823e098c323684b8218df808b in 2209ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:22:13 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2209ms.
+2025-03-27 07:22:14 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1002ms.
+2025-03-27 07:22:43 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:22:43 DEBUG [lightning::chain::chainmonitor:718] New best block 000000bff538a38e4aeb015311adfb646b203df30fb5848d1cd30789e9c7e2c7 at height 1970139 provided via best_block_updated
+2025-03-27 07:22:43 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000bff538a38e4aeb015311adfb646b203df30fb5848d1cd30789e9c7e2c7 in 2451ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:22:43 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2452ms.
+2025-03-27 07:23:13 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:23:13 DEBUG [lightning::chain::chainmonitor:718] New best block 0000009dbbdf179dfde1b17ab45003971f19715fa9879dfc8ddedefb50b57b93 at height 1970140 provided via best_block_updated
+2025-03-27 07:38:30 ERROR [lightning_transaction_sync::esplora:225] Failed during transaction sync, aborting. Synced so far: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:38:30 ERROR [ldk_node::chain:592] Sync of Lightning wallet failed: Failed to conduct transaction sync.
+2025-03-27 07:38:41 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 2546ms.
+2025-03-27 07:38:48 DEBUG [lightning::ln::peer_handler:2676] Broadcasting NodeAnnouncement after passing it to our own RoutingMessageHandler.
+2025-03-27 07:38:50 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:38:50 DEBUG [lightning::chain::chainmonitor:718] New best block 0000028ec0d6034fc46a5a9d3ac47e74e063d999d1c4bab5321a50678e2c2ccd at height 1970170 provided via best_block_updated
+2025-03-27 07:38:51 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000028ec0d6034fc46a5a9d3ac47e74e063d999d1c4bab5321a50678e2c2ccd in 2500ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:38:51 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2501ms.
+2025-03-27 07:39:19 INFO  [ldk_node::chain:822] Fee rate cache update finished in 377ms.
+2025-03-27 07:39:20 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:39:20 DEBUG [lightning::chain::chainmonitor:718] New best block 00000052cacb56ea61366028037ba30c32cefda5661603dad8e49d2bef821559 at height 1970171 provided via best_block_updated
+2025-03-27 07:39:21 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000052cacb56ea61366028037ba30c32cefda5661603dad8e49d2bef821559 in 2473ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:39:21 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2474ms.
+2025-03-27 07:39:50 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:39:50 DEBUG [lightning::chain::chainmonitor:718] New best block 000000cdb11edbece2968aafeba7723945e4419669b058c13ffee059558d7114 at height 1970172 provided via best_block_updated
+2025-03-27 07:39:51 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000cdb11edbece2968aafeba7723945e4419669b058c13ffee059558d7114 in 2479ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:39:51 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2480ms.
+2025-03-27 07:39:59 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1060ms.
+2025-03-27 07:40:20 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:40:20 DEBUG [lightning::chain::chainmonitor:718] New best block 0000023388f4d06ef1265d1f073673951cdab0ff51ded0d7ed9ac1ec3c47a0dc at height 1970173 provided via best_block_updated
+2025-03-27 07:40:21 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000023388f4d06ef1265d1f073673951cdab0ff51ded0d7ed9ac1ec3c47a0dc in 2437ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:40:21 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2438ms.
+2025-03-27 07:40:50 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:40:50 DEBUG [lightning::chain::chainmonitor:718] New best block 000002a55d7f5bbc432322f7f50c72d6eb0d49a9af5c8e422fc7eb2f0d48f486 at height 1970174 provided via best_block_updated
+2025-03-27 07:40:51 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002a55d7f5bbc432322f7f50c72d6eb0d49a9af5c8e422fc7eb2f0d48f486 in 2441ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:40:51 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2441ms.
+2025-03-27 07:41:20 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:41:20 DEBUG [lightning::chain::chainmonitor:718] New best block 0000002d72570739a5385bd0a6f1a2dc534f60d8a72669de84d9bcaa280793d6 at height 1970175 provided via best_block_updated
+2025-03-27 07:41:21 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000002d72570739a5385bd0a6f1a2dc534f60d8a72669de84d9bcaa280793d6 in 2448ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:41:21 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2448ms.
+2025-03-27 07:41:22 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 925ms.
+2025-03-27 07:41:50 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:41:50 DEBUG [lightning::chain::chainmonitor:718] New best block 0000019ac156f6eef3e914044fecb77d59e4c2bedf6087934a100cb1866dd4ef at height 1970176 provided via best_block_updated
+2025-03-27 07:41:51 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000019ac156f6eef3e914044fecb77d59e4c2bedf6087934a100cb1866dd4ef in 2433ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:41:51 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2434ms.
+2025-03-27 07:42:20 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:42:20 DEBUG [lightning::chain::chainmonitor:718] New best block 000002fef2d68057a919515d9df8186bcfad63fa79ad103e2879863a37e54821 at height 1970177 provided via best_block_updated
+2025-03-27 07:42:21 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002fef2d68057a919515d9df8186bcfad63fa79ad103e2879863a37e54821 in 2578ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:42:21 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2578ms.
+2025-03-27 07:42:39 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1119ms.
+2025-03-27 07:42:50 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:42:50 DEBUG [lightning::chain::chainmonitor:718] New best block 0000005b95052576970f4093bfd45644d90ab070b8cd80cb1b7f237c51cfd4c3 at height 1970178 provided via best_block_updated
+2025-03-27 07:42:51 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000005b95052576970f4093bfd45644d90ab070b8cd80cb1b7f237c51cfd4c3 in 2455ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:42:51 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2456ms.
+2025-03-27 07:43:20 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:43:20 DEBUG [lightning::chain::chainmonitor:718] New best block 000001d7891acda3ea6551b2946a602c20c9923d00976fbf3983d5b72a52aede at height 1970179 provided via best_block_updated
+2025-03-27 07:43:21 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001d7891acda3ea6551b2946a602c20c9923d00976fbf3983d5b72a52aede in 2464ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:43:21 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2465ms.
+2025-03-27 07:43:50 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:43:50 DEBUG [lightning::chain::chainmonitor:718] New best block 00000266b5a8c9f20e55ddf25874f224eb214ca0ad98bc4f2dce9c457808e10c at height 1970180 provided via best_block_updated
+2025-03-27 07:43:51 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000266b5a8c9f20e55ddf25874f224eb214ca0ad98bc4f2dce9c457808e10c in 2501ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:43:51 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2502ms.
+2025-03-27 07:43:59 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 922ms.
+2025-03-27 07:44:20 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:44:20 DEBUG [lightning::chain::chainmonitor:718] New best block 0000004acf626ad44300015d2cfa2157700aef219edd0911a5c51830abfff215 at height 1970181 provided via best_block_updated
+2025-03-27 07:44:21 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000004acf626ad44300015d2cfa2157700aef219edd0911a5c51830abfff215 in 2370ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:44:21 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2371ms.
+2025-03-27 07:44:50 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:44:50 DEBUG [lightning::chain::chainmonitor:718] New best block 0000035f1aefd053f54f0ea4b6b18fe6bc9fcc7ba64203c880df637d92707829 at height 1970182 provided via best_block_updated
+2025-03-27 07:44:51 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000035f1aefd053f54f0ea4b6b18fe6bc9fcc7ba64203c880df637d92707829 in 2489ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:44:51 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2489ms.
+2025-03-27 07:45:19 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 969ms.
+2025-03-27 07:45:21 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:45:21 DEBUG [lightning::chain::chainmonitor:718] New best block 000003720921b05c9e4ed2ba6f5fc49121a305771981f44c58e7897aa2fe694a at height 1970183 provided via best_block_updated
+2025-03-27 07:45:21 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000003720921b05c9e4ed2ba6f5fc49121a305771981f44c58e7897aa2fe694a in 2207ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:45:21 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2208ms.
+2025-03-27 07:45:50 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:45:50 DEBUG [lightning::chain::chainmonitor:718] New best block 0000031e452993533b8ce8d4e9eb1ac082f72de85f48811bac1b2cc6fb2c64b7 at height 1970184 provided via best_block_updated
+2025-03-27 07:45:50 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000031e452993533b8ce8d4e9eb1ac082f72de85f48811bac1b2cc6fb2c64b7 in 2269ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:45:50 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2269ms.
+2025-03-27 07:46:20 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:46:20 DEBUG [lightning::chain::chainmonitor:718] New best block 000000213ad172acc73a2694becfa28e528b1c6fd22264d6f37e52b79bb533be at height 1970185 provided via best_block_updated
+2025-03-27 07:46:21 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000213ad172acc73a2694becfa28e528b1c6fd22264d6f37e52b79bb533be in 2493ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:46:21 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2494ms.
+2025-03-27 07:46:39 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1043ms.
+2025-03-27 07:46:50 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:46:50 DEBUG [lightning::chain::chainmonitor:718] New best block 000000e69eb43094ef9cc8ca410de573a600e2469592a94a5d7a6cca011d120d at height 1970186 provided via best_block_updated
+2025-03-27 07:46:51 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000e69eb43094ef9cc8ca410de573a600e2469592a94a5d7a6cca011d120d in 2396ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:46:51 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2397ms.
+2025-03-27 07:47:20 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:47:20 DEBUG [lightning::chain::chainmonitor:718] New best block 000002b9cb6f0843f040305ac2b51259f2a5fbe484f6174dfd344e1758eb3b0f at height 1970187 provided via best_block_updated
+2025-03-27 07:47:21 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002b9cb6f0843f040305ac2b51259f2a5fbe484f6174dfd344e1758eb3b0f in 2505ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:47:21 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2506ms.
+2025-03-27 07:47:50 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:47:50 DEBUG [lightning::chain::chainmonitor:718] New best block 0000003539f9a973056398411cab6680081a10e4c3550a937ec56fd102da28ff at height 1970188 provided via best_block_updated
+2025-03-27 07:47:51 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000003539f9a973056398411cab6680081a10e4c3550a937ec56fd102da28ff in 2408ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:47:51 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2409ms.
+2025-03-27 07:47:59 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1137ms.
+2025-03-27 07:48:20 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:48:20 DEBUG [lightning::chain::chainmonitor:718] New best block 000001fd4ba3c7ecf5f998f4879ad63c7455c1059cbcb0639e1e425dfdf76951 at height 1970189 provided via best_block_updated
+2025-03-27 07:48:21 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001fd4ba3c7ecf5f998f4879ad63c7455c1059cbcb0639e1e425dfdf76951 in 2416ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:48:21 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2416ms.
+2025-03-27 07:58:46 ERROR [ldk_node::chain:592] Sync of Lightning wallet failed: Failed to conduct transaction sync.
+2025-03-27 07:59:12 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 2802ms.
+2025-03-27 07:59:12 INFO  [ldk_node::chain:822] Fee rate cache update finished in 313ms.
+2025-03-27 07:59:13 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:59:13 DEBUG [lightning::chain::chainmonitor:718] New best block 0000011c495f123d6c51d05991e9e3296bc1170a98c38abe1bed4c2ff67df912 at height 1970210 provided via best_block_updated
+2025-03-27 07:59:14 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000011c495f123d6c51d05991e9e3296bc1170a98c38abe1bed4c2ff67df912 in 2167ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:59:14 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2169ms.
+2025-03-27 07:59:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 07:59:40 DEBUG [lightning::chain::chainmonitor:718] New best block 00000206e0a10110edc8a96b8f7a62d023d890feb2ed255458316c27c7bef626 at height 1970211 provided via best_block_updated
+2025-03-27 07:59:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000206e0a10110edc8a96b8f7a62d023d890feb2ed255458316c27c7bef626 in 2315ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 07:59:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2316ms.
+2025-03-27 08:00:09 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000206e0a10110edc8a96b8f7a62d023d890feb2ed255458316c27c7bef626 in 352ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:00:09 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 354ms.
+2025-03-27 08:00:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1020ms.
+2025-03-27 08:00:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:00:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000002f3294fb7e6a9ab19f7dde8a34d3b4114846d067354380fa5e7c1101823 at height 1970212 provided via best_block_updated
+2025-03-27 08:00:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002f3294fb7e6a9ab19f7dde8a34d3b4114846d067354380fa5e7c1101823 in 2506ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:00:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2507ms.
+2025-03-27 08:01:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:01:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000000a4576d5bb2a0212fee796bb0428de2d83531e1e43a398da486568d4bf5 at height 1970213 provided via best_block_updated
+2025-03-27 08:01:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000a4576d5bb2a0212fee796bb0428de2d83531e1e43a398da486568d4bf5 in 2266ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:01:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2267ms.
+2025-03-27 08:01:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:01:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000000bb0219d74c195d5b5b8fcc1079fd68a7ca421c7f67ba670752e78b2567 at height 1970214 provided via best_block_updated
+2025-03-27 08:01:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000bb0219d74c195d5b5b8fcc1079fd68a7ca421c7f67ba670752e78b2567 in 2426ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:01:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2426ms.
+2025-03-27 08:01:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 961ms.
+2025-03-27 08:02:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:02:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000003533d9e4a968fcb6c8de1be25fcb2bfcddba81d79654761d185639fd75e at height 1970215 provided via best_block_updated
+2025-03-27 08:02:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000003533d9e4a968fcb6c8de1be25fcb2bfcddba81d79654761d185639fd75e in 2161ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:02:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2162ms.
+2025-03-27 08:02:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:02:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000011bc1d533a8610c5d004ed4efb509f7b489f597a9eb68675973a82111ed at height 1970216 provided via best_block_updated
+2025-03-27 08:02:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000011bc1d533a8610c5d004ed4efb509f7b489f597a9eb68675973a82111ed in 2426ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:02:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2426ms.
+2025-03-27 08:03:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:03:10 DEBUG [lightning::chain::chainmonitor:718] New best block 00000371fc04af1dcac5e46f761b82df9858ad131fda7f137c412ccbac503c46 at height 1970217 provided via best_block_updated
+2025-03-27 08:03:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000371fc04af1dcac5e46f761b82df9858ad131fda7f137c412ccbac503c46 in 2441ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:03:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2442ms.
+2025-03-27 08:03:12 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1038ms.
+2025-03-27 08:03:41 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:03:41 DEBUG [lightning::chain::chainmonitor:718] New best block 00000093cf03a6e3f68f678f0609aac648ffa3ce8a4e24638bb3a2e97a47ea1a at height 1970218 provided via best_block_updated
+2025-03-27 08:03:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000093cf03a6e3f68f678f0609aac648ffa3ce8a4e24638bb3a2e97a47ea1a in 2751ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:03:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2752ms.
+2025-03-27 08:04:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:04:10 DEBUG [lightning::chain::chainmonitor:718] New best block 0000007b513020768719d12dac2d3b4d1d5c4e9c59b860c742983f9dabbf95aa at height 1970219 provided via best_block_updated
+2025-03-27 08:04:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000007b513020768719d12dac2d3b4d1d5c4e9c59b860c742983f9dabbf95aa in 2178ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:04:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2179ms.
+2025-03-27 08:04:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1207ms.
+2025-03-27 08:04:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:04:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000000fbbe4100ce2cccbf0d8f9698ba91bd9def0f3587ce15e77fc7d6103c41 at height 1970220 provided via best_block_updated
+2025-03-27 08:04:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000fbbe4100ce2cccbf0d8f9698ba91bd9def0f3587ce15e77fc7d6103c41 in 2351ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:04:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2352ms.
+2025-03-27 08:05:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:05:10 DEBUG [lightning::chain::chainmonitor:718] New best block 00000116aba8c1fd0a7934fee27e13ba4fa9a83c43ecfc9c4ee3be7dcf44d8d9 at height 1970221 provided via best_block_updated
+2025-03-27 08:05:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000116aba8c1fd0a7934fee27e13ba4fa9a83c43ecfc9c4ee3be7dcf44d8d9 in 2447ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:05:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2448ms.
+2025-03-27 08:05:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:05:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000001b70b60bceec1ec6a69c43993d16b661acf4b51f73bcea1b6bfa9babcd1 at height 1970222 provided via best_block_updated
+2025-03-27 08:05:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001b70b60bceec1ec6a69c43993d16b661acf4b51f73bcea1b6bfa9babcd1 in 2407ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:05:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2408ms.
+2025-03-27 08:05:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1091ms.
+2025-03-27 08:06:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:06:10 DEBUG [lightning::chain::chainmonitor:718] New best block 0000017fe2d69a57c3796e8e5482cc03ea2c255004e8438649735491330efbea at height 1970223 provided via best_block_updated
+2025-03-27 08:06:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000017fe2d69a57c3796e8e5482cc03ea2c255004e8438649735491330efbea in 2463ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:06:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2464ms.
+2025-03-27 08:06:41 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:06:41 DEBUG [lightning::chain::chainmonitor:718] New best block 00000160b7ebcdefc1c39a78f4df5e705ee7c49090ad2401f7f190bfda96246f at height 1970224 provided via best_block_updated
+2025-03-27 08:06:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000160b7ebcdefc1c39a78f4df5e705ee7c49090ad2401f7f190bfda96246f in 2582ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:06:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2583ms.
+2025-03-27 08:07:10 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1262ms.
+2025-03-27 08:07:12 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:07:12 DEBUG [lightning::chain::chainmonitor:718] New best block 0000035e5ad67ebb1bc54901521d765f08f9c34ee1307a47c9ffa0cc2d0e670c at height 1970225 provided via best_block_updated
+2025-03-27 08:07:12 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000035e5ad67ebb1bc54901521d765f08f9c34ee1307a47c9ffa0cc2d0e670c in 2435ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:07:12 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2435ms.
+2025-03-27 08:07:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:07:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000000df76aa1dfd7dd6c39529328fb1a42cf46c1934f16b2110a03174af04a6 at height 1970226 provided via best_block_updated
+2025-03-27 08:07:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000df76aa1dfd7dd6c39529328fb1a42cf46c1934f16b2110a03174af04a6 in 2394ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:07:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2395ms.
+2025-03-27 08:08:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:08:11 DEBUG [lightning::chain::chainmonitor:718] New best block 000001d756ffb0aba9dc48ad655d645b0f227f46bc7b5d3c5b456df9ed6f01d9 at height 1970227 provided via best_block_updated
+2025-03-27 08:08:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001d756ffb0aba9dc48ad655d645b0f227f46bc7b5d3c5b456df9ed6f01d9 in 2496ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:08:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2496ms.
+2025-03-27 08:08:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 960ms.
+2025-03-27 08:08:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:08:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000033b11723c94868109987df45c028a9e0e658d001939f109a09f89901e60 at height 1970228 provided via best_block_updated
+2025-03-27 08:08:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000033b11723c94868109987df45c028a9e0e658d001939f109a09f89901e60 in 2285ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:08:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2285ms.
+2025-03-27 08:09:09 INFO  [ldk_node::chain:822] Fee rate cache update finished in 344ms.
+2025-03-27 08:09:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:09:11 DEBUG [lightning::chain::chainmonitor:718] New best block 0000020f6c9306d10b0950ae3e68ea828992e7700fe0ed1cbadffa244bd05ae2 at height 1970229 provided via best_block_updated
+2025-03-27 08:09:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000020f6c9306d10b0950ae3e68ea828992e7700fe0ed1cbadffa244bd05ae2 in 2472ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:09:12 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2475ms.
+2025-03-27 08:09:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:09:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000025c09b637ac8e4d50496a43b13c03c33d814f89e6a5c09eb7f15f4f6759 at height 1970230 provided via best_block_updated
+2025-03-27 08:09:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000025c09b637ac8e4d50496a43b13c03c33d814f89e6a5c09eb7f15f4f6759 in 2405ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:09:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2406ms.
+2025-03-27 08:09:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1326ms.
+2025-03-27 08:10:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:10:11 DEBUG [lightning::chain::chainmonitor:718] New best block 000001e9b2e1aedd5206185f30d4906334a0d928a3a2cee2c90a4a0ca8fad5c9 at height 1970231 provided via best_block_updated
+2025-03-27 08:10:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001e9b2e1aedd5206185f30d4906334a0d928a3a2cee2c90a4a0ca8fad5c9 in 2496ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:10:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2496ms.
+2025-03-27 08:10:19 DEBUG [lightning::ln::channelmanager:10371] Marking channels with 03e0c62ad56ab1d55475184784077df6ed15eb1f5b9bc61a47ff673302685667e8 disconnected and generating channel_updates.
+2025-03-27 08:10:33 DEBUG [lightning::ln::peer_handler:1501] Finished noise handshake for connection with 03e0c62ad56ab1d55475184784077df6ed15eb1f5b9bc61a47ff673302685667e8
+2025-03-27 08:10:33 INFO  [lightning::ln::peer_handler:1680] Received peer Init message from 03e0c62ad56ab1d55475184784077df6ed15eb1f5b9bc61a47ff673302685667e8: DataLossProtect: required, InitialRoutingSync: not supported, UpfrontShutdownScript: supported, GossipQueries: not supported, VariableLengthOnion: required, StaticRemoteKey: required, PaymentSecret: required, BasicMPP: supported, Wumbo: supported, AnchorsNonzeroFeeHtlcTx: not supported, AnchorsZeroFeeHtlcTx: supported, RouteBlinding: supported, ShutdownAnySegwit: supported, Taproot: not supported, OnionMessages: supported, ChannelType: supported, SCIDPrivacy: supported, ZeroConf: supported, Trampoline: not supported, unknown flags: none
+2025-03-27 08:10:33 DEBUG [lightning::ln::channelmanager:10542] Generating channel_reestablish events for 03e0c62ad56ab1d55475184784077df6ed15eb1f5b9bc61a47ff673302685667e8
+2025-03-27 08:10:33 DEBUG [lightning::ln::peer_handler:2275] Handling SendChannelReestablish event in peer_handler for node 03e0c62ad56ab1d55475184784077df6ed15eb1f5b9bc61a47ff673302685667e8 for channel 06098c5d465cbdc82da4279883714cb34c899e8629cb9ada7c7e350fcfb9d06f
+2025-03-27 08:10:33 DEBUG [lightning::ln::channel:5828] Reconnected channel 06098c5d465cbdc82da4279883714cb34c899e8629cb9ada7c7e350fcfb9d06f with no loss
+2025-03-27 08:10:33 DEBUG [lightning::ln::channelmanager:8387] Received channel_update ChannelUpdate { signature: 3044022008edc8804fb182a8ca34a1e5353f6ec455cc9cae45982c4e130fcbfd89da697002200bf6766212267d8a9484b5c19c6920b223386410c0214c63dc3057f17daecedb, contents: UnsignedChannelUpdate { chain_hash: f61eee3b63a380a477a063af32b2bbc97c9ff9f01f2c4225e973988108000000, short_channel_id: 2145348396418924544, timestamp: 1743062998, message_flags: 1, channel_flags: 1, cltv_expiry_delta: 72, htlc_minimum_msat: 1, htlc_maximum_msat: 1000000, fee_base_msat: 0, fee_proportional_millionths: 0, excess_data: [] } } for channel 06098c5d465cbdc82da4279883714cb34c899e8629cb9ada7c7e350fcfb9d06f.
+2025-03-27 08:10:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:10:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000014ca44e7df72d55d66f411ac4f3fe23e0674087a319c92899e5984da222 at height 1970232 provided via best_block_updated
+2025-03-27 08:10:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000014ca44e7df72d55d66f411ac4f3fe23e0674087a319c92899e5984da222 in 2398ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:10:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2399ms.
+2025-03-27 08:11:10 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1310ms.
+2025-03-27 08:11:12 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:11:12 DEBUG [lightning::chain::chainmonitor:718] New best block 0000030b055b3ac477cf1d3e5884c94025579d52816debdddc22074a0ea97b10 at height 1970233 provided via best_block_updated
+2025-03-27 08:11:13 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000030b055b3ac477cf1d3e5884c94025579d52816debdddc22074a0ea97b10 in 2529ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:11:13 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2530ms.
+2025-03-27 08:11:41 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:11:41 DEBUG [lightning::chain::chainmonitor:718] New best block 000001c73a67e1e6dc2fd41b0f26c703fa29669cab6a7c85eb0044c84820692c at height 1970234 provided via best_block_updated
+2025-03-27 08:11:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001c73a67e1e6dc2fd41b0f26c703fa29669cab6a7c85eb0044c84820692c in 2738ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:11:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2738ms.
+2025-03-27 08:12:02 DEBUG [lightning::ln::channelmanager:10371] Marking channels with 03e0c62ad56ab1d55475184784077df6ed15eb1f5b9bc61a47ff673302685667e8 disconnected and generating channel_updates.
+2025-03-27 08:12:08 DEBUG [lightning::ln::peer_handler:1501] Finished noise handshake for connection with 03e0c62ad56ab1d55475184784077df6ed15eb1f5b9bc61a47ff673302685667e8
+2025-03-27 08:12:08 INFO  [lightning::ln::peer_handler:1680] Received peer Init message from 03e0c62ad56ab1d55475184784077df6ed15eb1f5b9bc61a47ff673302685667e8: DataLossProtect: required, InitialRoutingSync: not supported, UpfrontShutdownScript: supported, GossipQueries: not supported, VariableLengthOnion: required, StaticRemoteKey: required, PaymentSecret: required, BasicMPP: supported, Wumbo: supported, AnchorsNonzeroFeeHtlcTx: not supported, AnchorsZeroFeeHtlcTx: supported, RouteBlinding: supported, ShutdownAnySegwit: supported, Taproot: not supported, OnionMessages: supported, ChannelType: supported, SCIDPrivacy: supported, ZeroConf: supported, Trampoline: not supported, unknown flags: none
+2025-03-27 08:12:08 DEBUG [lightning::ln::channelmanager:10542] Generating channel_reestablish events for 03e0c62ad56ab1d55475184784077df6ed15eb1f5b9bc61a47ff673302685667e8
+2025-03-27 08:12:08 DEBUG [lightning::ln::peer_handler:2275] Handling SendChannelReestablish event in peer_handler for node 03e0c62ad56ab1d55475184784077df6ed15eb1f5b9bc61a47ff673302685667e8 for channel 06098c5d465cbdc82da4279883714cb34c899e8629cb9ada7c7e350fcfb9d06f
+2025-03-27 08:12:08 DEBUG [lightning::ln::channel:5828] Reconnected channel 06098c5d465cbdc82da4279883714cb34c899e8629cb9ada7c7e350fcfb9d06f with no loss
+2025-03-27 08:12:08 DEBUG [lightning::ln::channelmanager:8387] Received channel_update ChannelUpdate { signature: 304402205dd0b4c0af93c74688d8869083c43be8c971b64f006ffad94cafb375080ad3b3022063541df00635b0c294f55e73ab727c261fcc53dc487dc9cf85d457d5d784d992, contents: UnsignedChannelUpdate { chain_hash: f61eee3b63a380a477a063af32b2bbc97c9ff9f01f2c4225e973988108000000, short_channel_id: 2145348396418924544, timestamp: 1743063060, message_flags: 1, channel_flags: 1, cltv_expiry_delta: 72, htlc_minimum_msat: 1, htlc_maximum_msat: 1000000, fee_base_msat: 0, fee_proportional_millionths: 0, excess_data: [] } } for channel 06098c5d465cbdc82da4279883714cb34c899e8629cb9ada7c7e350fcfb9d06f.
+2025-03-27 08:12:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:12:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000002e5275066df4b9819bb81e3ede80b037dc2c152eea44ec7b253832abb8c at height 1970235 provided via best_block_updated
+2025-03-27 08:12:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002e5275066df4b9819bb81e3ede80b037dc2c152eea44ec7b253832abb8c in 2218ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:12:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2220ms.
+2025-03-27 08:12:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1182ms.
+2025-03-27 08:12:41 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:12:41 DEBUG [lightning::chain::chainmonitor:718] New best block 0000000c9fe4622c39b7fcbff7300f0be842070237927fa5514d83abe70a8257 at height 1970236 provided via best_block_updated
+2025-03-27 08:12:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000000c9fe4622c39b7fcbff7300f0be842070237927fa5514d83abe70a8257 in 2540ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:12:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2542ms.
+2025-03-27 08:13:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:13:10 DEBUG [lightning::chain::chainmonitor:718] New best block 00000359e5c49d2247aa117a04c762f1f0da629af0df9c1016d2fb7bb7e359c9 at height 1970237 provided via best_block_updated
+2025-03-27 08:13:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000359e5c49d2247aa117a04c762f1f0da629af0df9c1016d2fb7bb7e359c9 in 2323ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:13:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2324ms.
+2025-03-27 08:13:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:13:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000000410ff7b36f2b5ed47dc8ee123a5d5610edba4da261c65ca75b9c68d6dd at height 1970238 provided via best_block_updated
+2025-03-27 08:13:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000410ff7b36f2b5ed47dc8ee123a5d5610edba4da261c65ca75b9c68d6dd in 2217ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:13:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2218ms.
+2025-03-27 08:13:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 985ms.
+2025-03-27 08:14:09 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000410ff7b36f2b5ed47dc8ee123a5d5610edba4da261c65ca75b9c68d6dd in 392ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:14:09 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 394ms.
+2025-03-27 08:14:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:14:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000002864d51f2549191392021cae099ece0c44a23fe76b6db4f2706dfa7e0e4 at height 1970239 provided via best_block_updated
+2025-03-27 08:14:41 DEBUG [lightning_transaction_sync::esplora:193] Encountered inconsistency during transaction sync, restarting.
+2025-03-27 08:14:42 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:14:42 DEBUG [lightning::chain::chainmonitor:718] New best block 000003570d211fd7b116b9a761358c0e81eec2a74df8c92218292a48a9c7a39b at height 1970240 provided via best_block_updated
+2025-03-27 08:14:43 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000003570d211fd7b116b9a761358c0e81eec2a74df8c92218292a48a9c7a39b in 4488ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:14:43 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 4489ms.
+2025-03-27 08:15:10 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1250ms.
+2025-03-27 08:15:10 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000003570d211fd7b116b9a761358c0e81eec2a74df8c92218292a48a9c7a39b in 308ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:15:10 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 309ms.
+2025-03-27 08:15:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:15:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000002fef79dc381c50b99de65e71653da6ab582a822f2c78857b506815044d6 at height 1970241 provided via best_block_updated
+2025-03-27 08:15:41 DEBUG [lightning_transaction_sync::esplora:193] Encountered inconsistency during transaction sync, restarting.
+2025-03-27 08:15:43 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:15:43 DEBUG [lightning::chain::chainmonitor:718] New best block 0000025f13fe30b681e2819b4464124dbad03cbabfc32788d7ef5b18738a1d84 at height 1970242 provided via best_block_updated
+2025-03-27 08:15:43 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000025f13fe30b681e2819b4464124dbad03cbabfc32788d7ef5b18738a1d84 in 4803ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:15:43 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 4803ms.
+2025-03-27 08:16:09 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000025f13fe30b681e2819b4464124dbad03cbabfc32788d7ef5b18738a1d84 in 409ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:16:09 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 411ms.
+2025-03-27 08:16:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 970ms.
+2025-03-27 08:16:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:16:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000018115b8e88ae25da7a9b79a8e1f6c2709cc4789d14d8c08f9bcb16d55a9 at height 1970243 provided via best_block_updated
+2025-03-27 08:16:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000018115b8e88ae25da7a9b79a8e1f6c2709cc4789d14d8c08f9bcb16d55a9 in 2162ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:16:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2162ms.
+2025-03-27 08:17:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:17:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000001f401a50d25ca2689607d1419f37237ace8168fbb9db4fa1bacbc6f9e5c at height 1970244 provided via best_block_updated
+2025-03-27 08:17:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001f401a50d25ca2689607d1419f37237ace8168fbb9db4fa1bacbc6f9e5c in 2669ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:17:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2670ms.
+2025-03-27 08:17:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:17:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000009ad8adb9b8a328fb3810d5afb60777b1a9cc7c76ff5dc6f9c2ff5954e6 at height 1970245 provided via best_block_updated
+2025-03-27 08:17:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000009ad8adb9b8a328fb3810d5afb60777b1a9cc7c76ff5dc6f9c2ff5954e6 in 2574ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:17:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2575ms.
+2025-03-27 08:17:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1611ms.
+2025-03-27 08:18:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:18:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000000a0ca00ebe21cca4a3f9d88e8a55b524a4b20e5679a796a9f59f7fbbc84 at height 1970246 provided via best_block_updated
+2025-03-27 08:18:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000a0ca00ebe21cca4a3f9d88e8a55b524a4b20e5679a796a9f59f7fbbc84 in 2577ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:18:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2579ms.
+2025-03-27 08:18:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:18:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000000c581b001d82982d04e344db14b2888d4d97fc13430ec3acf461d2cdee7 at height 1970247 provided via best_block_updated
+2025-03-27 08:18:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000c581b001d82982d04e344db14b2888d4d97fc13430ec3acf461d2cdee7 in 2377ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:18:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2377ms.
+2025-03-27 08:19:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:19:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000002f6129c94950d81f9cd7c36ff69558946b4c4a92c82a6662d4e9120b72a at height 1970248 provided via best_block_updated
+2025-03-27 08:19:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002f6129c94950d81f9cd7c36ff69558946b4c4a92c82a6662d4e9120b72a in 2385ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:19:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2386ms.
+2025-03-27 08:19:13 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1755ms.
+2025-03-27 08:19:13 INFO  [ldk_node::chain:822] Fee rate cache update finished in 344ms.
+2025-03-27 08:19:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:19:40 DEBUG [lightning::chain::chainmonitor:718] New best block 00000059a2c2eff6911b6f8e2d2db5bdc93ce637691d5339c935d386686e5490 at height 1970249 provided via best_block_updated
+2025-03-27 08:19:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000059a2c2eff6911b6f8e2d2db5bdc93ce637691d5339c935d386686e5490 in 2291ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:19:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2291ms.
+2025-03-27 08:20:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:20:11 DEBUG [lightning::chain::chainmonitor:718] New best block 00000071161c3e917b0f345ebf8d047330baa825190afb1acd0463b9e3a0cb31 at height 1970250 provided via best_block_updated
+2025-03-27 08:20:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000071161c3e917b0f345ebf8d047330baa825190afb1acd0463b9e3a0cb31 in 2602ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:20:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2602ms.
+2025-03-27 08:20:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1671ms.
+2025-03-27 08:20:41 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:20:41 DEBUG [lightning::chain::chainmonitor:718] New best block 000002753ec00828f65e4fd21a7288c481fecc3a828508ddeed8b141af951fb3 at height 1970251 provided via best_block_updated
+2025-03-27 08:20:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002753ec00828f65e4fd21a7288c481fecc3a828508ddeed8b141af951fb3 in 2707ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:20:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2708ms.
+2025-03-27 08:21:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:21:10 DEBUG [lightning::chain::chainmonitor:718] New best block 00000227bfdcf4010d96de3d9e7dfb719a2929d37fa5498e7af05de1bf7a2519 at height 1970252 provided via best_block_updated
+2025-03-27 08:21:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000227bfdcf4010d96de3d9e7dfb719a2929d37fa5498e7af05de1bf7a2519 in 2456ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:21:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2456ms.
+2025-03-27 08:21:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:21:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000001a842fda65cd21dc6c228a23fee5ec11e73ffbb1204bb710f7b30ef28cf at height 1970253 provided via best_block_updated
+2025-03-27 08:21:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001a842fda65cd21dc6c228a23fee5ec11e73ffbb1204bb710f7b30ef28cf in 2411ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:21:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2411ms.
+2025-03-27 08:21:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1244ms.
+2025-03-27 08:22:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:22:10 DEBUG [lightning::chain::chainmonitor:718] New best block 00000305c45d5286737644c92350192fe5f34d4d7dae7a048cce07642055ead8 at height 1970254 provided via best_block_updated
+2025-03-27 08:22:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000305c45d5286737644c92350192fe5f34d4d7dae7a048cce07642055ead8 in 2315ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:22:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2315ms.
+2025-03-27 08:22:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:22:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000026480aadcc449a5ceb52d7340e5ebcda29aa19b6f5aca53ad03c0aad06e at height 1970255 provided via best_block_updated
+2025-03-27 08:22:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000026480aadcc449a5ceb52d7340e5ebcda29aa19b6f5aca53ad03c0aad06e in 2337ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:22:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2338ms.
+2025-03-27 08:23:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:23:11 DEBUG [lightning::chain::chainmonitor:718] New best block 00000220347327c773fdb8480a5c3fbca4037d2d7bb275ac57240c7e15d2c984 at height 1970256 provided via best_block_updated
+2025-03-27 08:23:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000220347327c773fdb8480a5c3fbca4037d2d7bb275ac57240c7e15d2c984 in 2833ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:23:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2834ms.
+2025-03-27 08:23:13 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1244ms.
+2025-03-27 08:23:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:23:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000012d0954ee7025ba1ce093fe4022a7c89cdb4a0aab86ef7b2854b5fffba3 at height 1970257 provided via best_block_updated
+2025-03-27 08:23:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000012d0954ee7025ba1ce093fe4022a7c89cdb4a0aab86ef7b2854b5fffba3 in 2432ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:23:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2432ms.
+2025-03-27 08:24:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:24:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000001c9f15ee7a715af6b0e2821b0d797656ed5c656d8eb1e63b1f08c413d5a at height 1970258 provided via best_block_updated
+2025-03-27 08:24:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001c9f15ee7a715af6b0e2821b0d797656ed5c656d8eb1e63b1f08c413d5a in 2324ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:24:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2326ms.
+2025-03-27 08:24:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1211ms.
+2025-03-27 08:24:41 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:24:41 DEBUG [lightning::chain::chainmonitor:718] New best block 0000025e5d9cfeb1879e3190f75aa5214627395575425fca6ec3051dbd1bdd7e at height 1970259 provided via best_block_updated
+2025-03-27 08:24:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000025e5d9cfeb1879e3190f75aa5214627395575425fca6ec3051dbd1bdd7e in 2549ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:24:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2550ms.
+2025-03-27 08:25:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:25:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000000ba645c22700fb6982cde77d41ba636e531389b046dd659e171fb9842be at height 1970260 provided via best_block_updated
+2025-03-27 08:25:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000ba645c22700fb6982cde77d41ba636e531389b046dd659e171fb9842be in 2345ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:25:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2346ms.
+2025-03-27 08:25:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:25:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000000d137df92c48c6e9b7a0b2ae6fc8c2bc2f7dbd9e898626584b9e23b9ff2 at height 1970261 provided via best_block_updated
+2025-03-27 08:25:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000d137df92c48c6e9b7a0b2ae6fc8c2bc2f7dbd9e898626584b9e23b9ff2 in 2388ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:25:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2389ms.
+2025-03-27 08:25:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 995ms.
+2025-03-27 08:26:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:26:10 DEBUG [lightning::chain::chainmonitor:718] New best block 0000001e4d147451543dddf148d84d805a3cebfdcf97084bf26c010993fae39b at height 1970262 provided via best_block_updated
+2025-03-27 08:26:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000001e4d147451543dddf148d84d805a3cebfdcf97084bf26c010993fae39b in 2380ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:26:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2382ms.
+2025-03-27 08:26:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:26:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000002f7cb10ff90a4ad4c7c61bb5b43ca578165db425b55ed2850031cc55165 at height 1970263 provided via best_block_updated
+2025-03-27 08:26:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002f7cb10ff90a4ad4c7c61bb5b43ca578165db425b55ed2850031cc55165 in 2362ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:26:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2362ms.
+2025-03-27 08:27:10 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 998ms.
+2025-03-27 08:27:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:27:11 DEBUG [lightning::chain::chainmonitor:718] New best block 000002019d66459d22020fec64b1f8f6013e6e278c4f8c19cc1d17c8a5ae439e at height 1970264 provided via best_block_updated
+2025-03-27 08:27:12 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002019d66459d22020fec64b1f8f6013e6e278c4f8c19cc1d17c8a5ae439e in 2323ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:27:12 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2324ms.
+2025-03-27 08:27:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:27:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000028a18045a3c993fe72751835d70e5ee96c2ab74b3b0ee5f3ebc6c27d072 at height 1970265 provided via best_block_updated
+2025-03-27 08:27:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000028a18045a3c993fe72751835d70e5ee96c2ab74b3b0ee5f3ebc6c27d072 in 2476ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:27:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2477ms.
+2025-03-27 08:28:09 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000028a18045a3c993fe72751835d70e5ee96c2ab74b3b0ee5f3ebc6c27d072 in 323ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:28:09 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 324ms.
+2025-03-27 08:28:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1130ms.
+2025-03-27 08:28:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:28:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000002b4fde47d73a47f11166c9d94e9f7bff9d9246a95c7de6bad130d47c86e at height 1970266 provided via best_block_updated
+2025-03-27 08:28:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002b4fde47d73a47f11166c9d94e9f7bff9d9246a95c7de6bad130d47c86e in 2684ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:28:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2684ms.
+2025-03-27 08:29:09 INFO  [ldk_node::chain:822] Fee rate cache update finished in 323ms.
+2025-03-27 08:29:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:29:11 DEBUG [lightning::chain::chainmonitor:718] New best block 000000c41d1b8df3b93c3a76d96ea18b99c8a7b9b9176d68fc9fe059a3198f0a at height 1970267 provided via best_block_updated
+2025-03-27 08:29:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000c41d1b8df3b93c3a76d96ea18b99c8a7b9b9176d68fc9fe059a3198f0a in 2286ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:29:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2287ms.
+2025-03-27 08:29:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:29:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000002da7a4d6758f9971662034b2f91d080caa18509f9c56920c8688cc926b8 at height 1970268 provided via best_block_updated
+2025-03-27 08:29:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002da7a4d6758f9971662034b2f91d080caa18509f9c56920c8688cc926b8 in 2298ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:29:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2299ms.
+2025-03-27 08:29:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 986ms.
+2025-03-27 08:30:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:30:10 DEBUG [lightning::chain::chainmonitor:718] New best block 00000180b8e654ed10184d8793c508a273896b19855c449a3d38d4027ad398c6 at height 1970269 provided via best_block_updated
+2025-03-27 08:30:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000180b8e654ed10184d8793c508a273896b19855c449a3d38d4027ad398c6 in 2513ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:30:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2514ms.
+2025-03-27 08:30:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:30:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000000ac6db78478ba0e8d0f5dbdcd630ed94cacb74fb2ad4db829df6f4ba887 at height 1970270 provided via best_block_updated
+2025-03-27 08:30:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000ac6db78478ba0e8d0f5dbdcd630ed94cacb74fb2ad4db829df6f4ba887 in 2391ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:30:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2391ms.
+2025-03-27 08:31:10 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1097ms.
+2025-03-27 08:31:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:31:11 DEBUG [lightning::chain::chainmonitor:718] New best block 000001af64b5bd62f9563cde87c7e1dd74728b32f016e9758867b6c0e9c5ebab at height 1970271 provided via best_block_updated
+2025-03-27 08:31:12 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001af64b5bd62f9563cde87c7e1dd74728b32f016e9758867b6c0e9c5ebab in 2335ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:31:12 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2335ms.
+2025-03-27 08:31:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:31:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000035c807408a3e84f1230423a6f1bf4eee44587a3f458439c6bf01eac956e at height 1970272 provided via best_block_updated
+2025-03-27 08:31:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000035c807408a3e84f1230423a6f1bf4eee44587a3f458439c6bf01eac956e in 2294ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:31:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2295ms.
+2025-03-27 08:32:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:32:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000003590bc40506ed31417b970d38a1f268b64dea0c4ed3ee81e6c963f47ec8 at height 1970273 provided via best_block_updated
+2025-03-27 08:32:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000003590bc40506ed31417b970d38a1f268b64dea0c4ed3ee81e6c963f47ec8 in 2226ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:32:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2227ms.
+2025-03-27 08:32:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1173ms.
+2025-03-27 08:32:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:32:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000000e433d50390e4c779aa33978eb02556d9654f50570f72f636afbf4d85a3 at height 1970274 provided via best_block_updated
+2025-03-27 08:32:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000e433d50390e4c779aa33978eb02556d9654f50570f72f636afbf4d85a3 in 2209ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:32:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2210ms.
+2025-03-27 08:33:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:33:10 DEBUG [lightning::chain::chainmonitor:718] New best block 0000031c9bff71150905926cadfffaf95cace0794d27ae6dcc5c01192c79316d at height 1970275 provided via best_block_updated
+2025-03-27 08:33:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000031c9bff71150905926cadfffaf95cace0794d27ae6dcc5c01192c79316d in 2246ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:33:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2246ms.
+2025-03-27 08:33:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:33:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000002ffd7a4d994a38c0ac0007ba05f470724f7717445e13c4409f61ad82a34 at height 1970276 provided via best_block_updated
+2025-03-27 08:33:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002ffd7a4d994a38c0ac0007ba05f470724f7717445e13c4409f61ad82a34 in 2355ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:33:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2355ms.
+2025-03-27 08:33:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1145ms.
+2025-03-27 08:34:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:34:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000001c32e9ebfcb3be10e3e3dadeb11e51ed39e209d511be1ae4a9d72246de2 at height 1970277 provided via best_block_updated
+2025-03-27 08:34:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001c32e9ebfcb3be10e3e3dadeb11e51ed39e209d511be1ae4a9d72246de2 in 2548ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:34:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2548ms.
+2025-03-27 08:34:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:34:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000032ca1b4d6abb279690567314a2eaac481616f173828accf142f85552eee at height 1970278 provided via best_block_updated
+2025-03-27 08:34:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000032ca1b4d6abb279690567314a2eaac481616f173828accf142f85552eee in 2467ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:34:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2468ms.
+2025-03-27 08:35:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:35:10 DEBUG [lightning::chain::chainmonitor:718] New best block 00000141108e025dd3f45b53706638d9c8892848bcb6df609ae1cfc338ac8e36 at height 1970279 provided via best_block_updated
+2025-03-27 08:35:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000141108e025dd3f45b53706638d9c8892848bcb6df609ae1cfc338ac8e36 in 2340ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:35:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2341ms.
+2025-03-27 08:35:12 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1091ms.
+2025-03-27 08:35:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:35:40 DEBUG [lightning::chain::chainmonitor:718] New best block 00000014ddcd03c1dda5e0856b482c6de6b90775d9290dcad8f15f3104f00c66 at height 1970280 provided via best_block_updated
+2025-03-27 08:35:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000014ddcd03c1dda5e0856b482c6de6b90775d9290dcad8f15f3104f00c66 in 2539ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:35:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2539ms.
+2025-03-27 08:36:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:36:10 DEBUG [lightning::chain::chainmonitor:718] New best block 00000188f6a9f6566344bdd9cf217f1f793499c4b9cb088b307b9b8a0cefa9fa at height 1970281 provided via best_block_updated
+2025-03-27 08:36:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000188f6a9f6566344bdd9cf217f1f793499c4b9cb088b307b9b8a0cefa9fa in 2243ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:36:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2244ms.
+2025-03-27 08:36:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1213ms.
+2025-03-27 08:36:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:36:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000000a5ccf15899b92dabdbde6942f006e223ecbf325a9eede38be3a335db2f at height 1970282 provided via best_block_updated
+2025-03-27 08:36:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000a5ccf15899b92dabdbde6942f006e223ecbf325a9eede38be3a335db2f in 2559ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:36:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2561ms.
+2025-03-27 08:37:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:37:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000001ffe2d5e4c2274651b4ffbda9218f4bc32882a2b515d88ef05047d0c563 at height 1970283 provided via best_block_updated
+2025-03-27 08:37:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001ffe2d5e4c2274651b4ffbda9218f4bc32882a2b515d88ef05047d0c563 in 2558ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:37:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2559ms.
+2025-03-27 08:37:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:37:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000001d61c270c6f3b5671fcce80bb246372c04f7398ccff7d80a8fae433d76c at height 1970284 provided via best_block_updated
+2025-03-27 08:37:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001d61c270c6f3b5671fcce80bb246372c04f7398ccff7d80a8fae433d76c in 2235ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:37:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2236ms.
+2025-03-27 08:37:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1500ms.
+2025-03-27 08:38:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:38:10 DEBUG [lightning::chain::chainmonitor:718] New best block 0000028c5586dc6bff1ce8309bb70914148447ce45db8658439bcfa2963c7e8f at height 1970285 provided via best_block_updated
+2025-03-27 08:38:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000028c5586dc6bff1ce8309bb70914148447ce45db8658439bcfa2963c7e8f in 2162ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:38:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2162ms.
+2025-03-27 08:38:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:38:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000034e6a3bc11844395e2ecee745cb37cc6a7b3ebbfa85ecb80c75db0e0cb9 at height 1970286 provided via best_block_updated
+2025-03-27 08:38:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000034e6a3bc11844395e2ecee745cb37cc6a7b3ebbfa85ecb80c75db0e0cb9 in 2282ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:38:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2282ms.
+2025-03-27 08:39:09 DEBUG [lightning::ln::peer_handler:2676] Broadcasting NodeAnnouncement after passing it to our own RoutingMessageHandler.
+2025-03-27 08:39:09 INFO  [ldk_node::chain:822] Fee rate cache update finished in 315ms.
+2025-03-27 08:39:09 DEBUG [lightning_rapid_gossip_sync::processing:326] Processing RGS update from 1743044400 with 0 nodes, 0 channel announcements and 20 channel updates.
+2025-03-27 08:39:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:39:11 DEBUG [lightning::chain::chainmonitor:718] New best block 000002253d700566dd818a5bbeac3ea06784f3d7fac66cf276ca8d7db8c451ea at height 1970287 provided via best_block_updated
+2025-03-27 08:39:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000002253d700566dd818a5bbeac3ea06784f3d7fac66cf276ca8d7db8c451ea in 2469ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:39:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2470ms.
+2025-03-27 08:39:13 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1663ms.
+2025-03-27 08:39:41 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:39:41 DEBUG [lightning::chain::chainmonitor:718] New best block 00000254bbb5937a91edeb478ff1592ddbbb3f24f738bb61c4c2c0a20966adf0 at height 1970288 provided via best_block_updated
+2025-03-27 08:39:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000254bbb5937a91edeb478ff1592ddbbb3f24f738bb61c4c2c0a20966adf0 in 2691ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:39:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2692ms.
+2025-03-27 08:40:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:40:11 DEBUG [lightning::chain::chainmonitor:718] New best block 000000fee1c7e3411e47f12ffcbbbb0adc586206c02f7dea0bb283d5d7d34c13 at height 1970289 provided via best_block_updated
+2025-03-27 08:40:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000fee1c7e3411e47f12ffcbbbb0adc586206c02f7dea0bb283d5d7d34c13 in 2701ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:40:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2703ms.
+2025-03-27 08:40:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1653ms.
+2025-03-27 08:40:41 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:40:41 DEBUG [lightning::chain::chainmonitor:718] New best block 0000005fdba0061bf30814e29306769348f7847bfc6783d369d8715a266fb7e6 at height 1970290 provided via best_block_updated
+2025-03-27 08:40:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000005fdba0061bf30814e29306769348f7847bfc6783d369d8715a266fb7e6 in 2718ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:40:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2720ms.
+2025-03-27 08:41:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:41:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000000547586de640eac2b746cee436905abfc23b02727dfb24a8d503426a0c7 at height 1970291 provided via best_block_updated
+2025-03-27 08:41:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000000547586de640eac2b746cee436905abfc23b02727dfb24a8d503426a0c7 in 2200ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:41:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2200ms.
+2025-03-27 08:41:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:41:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000003c0cf910f232ed8b5d51ca41e8a59019d6cc4a182ff7487630a9ff2f5c at height 1970292 provided via best_block_updated
+2025-03-27 08:41:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000003c0cf910f232ed8b5d51ca41e8a59019d6cc4a182ff7487630a9ff2f5c in 2170ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:41:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2171ms.
+2025-03-27 08:41:50 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1507ms.
+2025-03-27 08:42:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:42:10 DEBUG [lightning::chain::chainmonitor:718] New best block 00000112110a9dffc1bda4cad15e1077562004c3c26917f2ebbc1bcca12ca59d at height 1970293 provided via best_block_updated
+2025-03-27 08:42:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000112110a9dffc1bda4cad15e1077562004c3c26917f2ebbc1bcca12ca59d in 2509ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:42:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2511ms.
+2025-03-27 08:42:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:42:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000024f235dbed8933164aa0170908b86b09a8b30f36b053b769a4f1aa31f77 at height 1970294 provided via best_block_updated
+2025-03-27 08:42:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 0000024f235dbed8933164aa0170908b86b09a8b30f36b053b769a4f1aa31f77 in 2137ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:42:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2138ms.
+2025-03-27 08:43:10 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 976ms.
+2025-03-27 08:43:11 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:43:11 DEBUG [lightning::chain::chainmonitor:718] New best block 00000263c6f51d46033d12205a443bee774ac57b5db10f1f3e5ab3bfea425a90 at height 1970295 provided via best_block_updated
+2025-03-27 08:43:12 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000263c6f51d46033d12205a443bee774ac57b5db10f1f3e5ab3bfea425a90 in 2353ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:43:12 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2354ms.
+2025-03-27 08:43:39 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000263c6f51d46033d12205a443bee774ac57b5db10f1f3e5ab3bfea425a90 in 329ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:43:39 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 331ms.
+2025-03-27 08:44:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:44:10 DEBUG [lightning::chain::chainmonitor:718] New best block 00000033fc1c0a4a07fa10ad45d24811543f84bd2cb36b10ec6a4422aa26d417 at height 1970296 provided via best_block_updated
+2025-03-27 08:44:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 00000033fc1c0a4a07fa10ad45d24811543f84bd2cb36b10ec6a4422aa26d417 in 2165ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:44:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2165ms.
+2025-03-27 08:44:30 INFO  [ldk_node::chain:489] Incremental sync of on-chain wallet finished in 1194ms.
+2025-03-27 08:44:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:44:40 DEBUG [lightning::chain::chainmonitor:718] New best block 000001261fff0caea8bdefd43f2b28306a4f72a19046e0002c2a9ffd6dfaef28 at height 1970297 provided via best_block_updated
+2025-03-27 08:44:41 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001261fff0caea8bdefd43f2b28306a4f72a19046e0002c2a9ffd6dfaef28 in 2134ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:44:41 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2136ms.
+2025-03-27 08:45:10 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:45:10 DEBUG [lightning::chain::chainmonitor:718] New best block 000001c67fce951b8c9767205cefa24e1eab1b1b2dd32b970689ae458882df23 at height 1970298 provided via best_block_updated
+2025-03-27 08:45:11 DEBUG [lightning_transaction_sync::esplora:239] Finished transaction sync at tip 000001c67fce951b8c9767205cefa24e1eab1b1b2dd32b970689ae458882df23 in 2204ms: 0 confirmed, 0 unconfirmed.
+2025-03-27 08:45:11 INFO  [ldk_node::chain:561] Sync of Lightning wallet finished in 2204ms.
+2025-03-27 08:45:40 DEBUG [lightning::ln::channel:6721] Not producing channel_ready: we do not need a commitment update
+2025-03-27 08:45:40 DEBUG [lightning::chain::chainmonitor:718] New best block 0000016b0693c9f714cfdeec954b1a6fe336f286fd7c8585e2bd0c3e9602f25c at height 1970299 provided via best_block_updated

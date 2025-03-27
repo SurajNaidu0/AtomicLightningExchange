@@ -258,13 +258,20 @@ fn run_node_cli(node: Node, role: &str) {
                     let receiver_pubkey = &recipient_pubkey_str.as_str();
                     let lock_time = timeout_str.parse().expect("lock_timr has to be i64");
                     println!("Payment hash: {}", hash_str);
-                    let address = bitoin_htlc::create_taproot_htlc(hash_str.as_str(), sender_pubkey, receiver_pubkey, lock_time,KnownHrp::Testnets,None).expect("Error while creating a address");
+                    let htlc_taproot_address = bitoin_htlc::create_taproot_htlc(hash_str.as_str(), sender_pubkey, receiver_pubkey, lock_time,KnownHrp::Testnets,None).expect("Error while creating a address");
 
-                    println!("Htlc address is {}",address);
+                    println!("Htlc address is {}", htlc_taproot_address);
 
+                    match node.onchain_payment().send_to_address(&htlc_taproot_address, sats_value) {
+                        Ok(txid) => println!("On-chain transfer successful. Transaction ID: {}", txid),
+                        Err(e) => println!("Error sending on-chain transfer: {:?}", e),
+                    }
                 } else {
                     println!("No payment hash was created.");
                 }
+            }
+            (Some("atomicswapredeem"), [amount_str, recipient_pubkey_str, sender_refund_publickey, timeout_str]) => {
+                
             }
             (Some("exit"), _) => break,
             _ => println!("Unknown command or incorrect arguments: {}", input),
