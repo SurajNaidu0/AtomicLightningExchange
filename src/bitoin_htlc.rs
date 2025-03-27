@@ -7,7 +7,6 @@ use std::str::FromStr;
 use bitcoin::secp256k1::{Secp256k1, SecretKey, Message};
 use hex;
 use bitcoin::script::PushBytesBuf;
-use serde::Deserialize;
 use serde_json::json;
 use std::fs::File;
 use std::io::Write;
@@ -15,9 +14,55 @@ use rand::Rng;
 use bitcoin::taproot::{ControlBlock, LeafVersion, TapLeafHash, TaprootError, TaprootMerkleBranch};
 use bitcoin::EcdsaSighashType;
 use bitcoin::absolute::{LockTime,Time};
+use ldk_node::lightning_invoice::Bolt11Invoice;
+use serde::{Deserialize, Serialize};
+use serde_json;
+use reqwest;
 
 use crate::config_taproot_htlc::{ConfigTaprootHTLC,ConfigTaprootHTLCBuilder};
 use std::io::Error;
+
+#[derive(Debug, Serialize, Deserialize)]
+struct UtxoStatus {
+    confirmed: bool,
+    block_height: Option<i32>,
+    block_hash: String,
+    block_time: u64,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+struct Utxo {
+    txid: String,
+    vout: u32,
+    status: UtxoStatus,
+    value: u64,
+}
+
+#[derive(Debug)]
+pub struct AddressUtxos {
+    pub utxos: Vec<Utxo>,
+}
+
+impl AddressUtxos {
+    pub async fn fetch(address: &Address) -> Result<Self, Box<dyn std::error::Error>> {
+        let url = format!("https://mutinynet.com/api/address/{}/utxo", address);
+        
+        let response = reqwest::get(&url).await?;
+        let utxos: Vec<Utxo> = response.json().await?;
+        
+        Ok(AddressUtxos { utxos })
+    }
+}
+
+async fn fetch_utxos() -> Result<Vec<Utxo>, Box<dyn std::error::Error>> {
+    let url = "https://mutinynet.com/api/address/tb1pu8ysre22dcl6qy5m5w7mjwutw73w4u24slcdh4myq06uhr6q29dqwc3ckt/utxo";
+    
+    // Make HTTP GET request
+    let response = reqwest::get(url).await?;
+    let utxos: Vec<Utxo> = response.json().await?;
+    
+    Ok(utxos)
+}
 
 pub fn create_taproot_htlc(
     secret_hash: &str,
@@ -152,10 +197,51 @@ fn redeem_taproot_htlc(htlc_config:ConfigTaprootHTLC,preimage: &str, receiver_pr
     println!("redeem_taproot_witness {:?}",witness);
 
     tx.input[0].witness = witness;
-
     // let tx_hex = bitcoin::consensus::encode::serialize_hex(&tx);
     // println!("redeem hex : {}",tx_hex);
     
     return Ok(tx); // Placeholder return (could return the output address if needed)
 }
 
+fn check_lighting_invoice(invoice:Bolt11Invoice,sats_value:u64)->bool{
+    //checking amount 
+    if invoice.amount_milli_satoshis().unwrap() != sats_value*1000 {
+        return false
+    }else{
+        true
+    }
+}
+
+async fn check_redeem_taproot_htlc( secret_hash: &str,
+    sender_pubkey: &str,
+    receiver_pubkey: &str,
+    lock_time: u32,
+    network: KnownHrp,
+    internal_key: Option<XOnlyPublicKey>,) -> Result<ConfigTaprootHTLC,Error> {
+        // Parse sender and receiver public keys
+        let sender_xonly = XOnlyPublicKey::from_str(sender_pubkey)
+        .map_err(|_| Error::new(std::io::ErrorKind::InvalidInput, "Invalid sender pubkey"))?;
+        let receiver_xonly = XOnlyPublicKey::from_str(receiver_pubkey)
+        .map_err(|_| Error::new(std::io::ErrorKind::InvalidInput, "Invalid receiver pubkey"))?;
+
+        // Configure HTLC using builder pattern
+        let mut builder = ConfigTaprootHTLCBuilder::new()
+        .with_redeem_config(secret_hash, &receiver_xonly)
+        .with_refund_config(lock_time as i64, &sender_xonly); // Cast u32 to i64 for compatibility
+
+        // Set optional internal key
+        // if let Some(key) = internal_key {
+        //     builder = builder.with_internal_key(key);
+        // }
+
+        // Build the configuration and generate the address
+        let config = builder
+            .with_merkel_root()?
+            .with_address(network)
+            .build()?;
+
+        let utxo = AddressUtxos::fetch(&config.address).await.unwrap();
+        //checking trx ammount 
+
+        Ok(config)
+    }

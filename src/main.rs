@@ -14,7 +14,7 @@ use ldk_node::{
     bitcoin::{secp256k1::PublicKey, Network, address::Address},
     config::ChannelConfig,
     lightning::ln::msgs::SocketAddress,
-    lightning_invoice::Bolt11Invoice,
+    lightning_invoice::{Bolt11Invoice,SignedRawBolt11Invoice},
     Builder, Node,
 };
 use ldk_node::payment::{PaymentStatus, PaymentKind};
@@ -215,7 +215,7 @@ fn run_node_cli(node: Node, role: &str) {
                     Err(e) => println!("Error parsing invoice: {:?}", e),
                 }
             }
-            (Some("atomicswapsend"), [amount_str, recipient_pubkey_str, sender_refund_publickey, timeout_str]) => {
+            (Some("atomicswapsend"), [amount_str, recipient_pubkey_str, sender_refund_publickey, block_num_lock]) => {
 
                 
                 // Parse inputs
@@ -226,19 +226,25 @@ fn run_node_cli(node: Node, role: &str) {
                         continue;
                     }
                 };
+                let block_num_lock:u32 = block_num_lock.parse().expect("lock_timr has to be i64");
 
                 if (sats_value >1000){
                     println!("on testnet only 1000 sats can be sent");
                     continue;
                 }
-           
+                if block_num_lock <= 3 {
+                    println!("redmeer should atleast get 3 more block time before refund can be tryed. Try setting block_num_lock above 3");
+                }
+
                 // Generate Lightning invoice (amount in millisatoshis)
                 let msats = sats_value * 1000;
 
                 // Instead of storing a reference, we'll store the actual hash value
                 let mut payment_hash: Option<ldk_node::bitcoin::hashes::sha256::Hash> = None;
 
-                match node.bolt11_payment().receive(msats, "test invoice", 6000) {
+                //atleast 3 more block to redeem
+                let expiry_time = block_num_lock*60 - 3*60;
+                match node.bolt11_payment().receive(msats, "test invoice", expiry_time) {
                     Ok(inv) => {
                         let hash = inv.payment_hash(); // Get the hash value
                         payment_hash = Some(*hash);     // Store the value, not a reference
@@ -256,9 +262,8 @@ fn run_node_cli(node: Node, role: &str) {
                     let hash_str = hash.to_string();
                     let sender_pubkey = sender_refund_publickey.as_str();
                     let receiver_pubkey = &recipient_pubkey_str.as_str();
-                    let lock_time = timeout_str.parse().expect("lock_timr has to be i64");
                     println!("Payment hash: {}", hash_str);
-                    let htlc_taproot_address = bitoin_htlc::create_taproot_htlc(hash_str.as_str(), sender_pubkey, receiver_pubkey, lock_time,KnownHrp::Testnets,None).expect("Error while creating a address");
+                    let htlc_taproot_address = bitoin_htlc::create_taproot_htlc(hash_str.as_str(), sender_pubkey, receiver_pubkey, block_num_lock,KnownHrp::Testnets,None).expect("Error while creating a address");
 
                     println!("Htlc address is {}", htlc_taproot_address);
 
@@ -270,8 +275,24 @@ fn run_node_cli(node: Node, role: &str) {
                     println!("No payment hash was created.");
                 }
             }
-            (Some("atomicswapredeem"), [amount_str, recipient_pubkey_str, sender_refund_publickey, timeout_str]) => {
+            (Some("atomicswapredeem"), [invoice ,amount_str, recipient_pubkey_str, sender_refund_publickey, block_num_lock]) => {
+
+                let sats_value: u64 = match amount_str.parse() {
+                    Ok(val) => val,
+                    Err(_) => {
+                        println!("Error: Invalid amount in satoshis");
+                        continue;
+                    }
+                };
+
+                let signed = invoice.parse::<SignedRawBolt11Invoice>().unwrap();
+                let inovice = Bolt11Invoice::from_signed(signed).unwrap();
+
                 
+
+
+
+
             }
             (Some("exit"), _) => break,
             _ => println!("Unknown command or incorrect arguments: {}", input),
