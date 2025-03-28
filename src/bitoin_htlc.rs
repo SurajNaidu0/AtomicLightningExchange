@@ -73,7 +73,7 @@ pub fn create_taproot_htlc(
     lock_time: u32,
     network: KnownHrp,
     internal_key: Option<XOnlyPublicKey>,
-) -> Result<Address, Error> {
+) -> Result<ConfigTaprootHTLC, Error> {
     // Parse sender and receiver public keys
     let sender_xonly = XOnlyPublicKey::from_str(sender_pubkey)
         .map_err(|_| Error::new(std::io::ErrorKind::InvalidInput, "Invalid sender pubkey"))?;
@@ -96,7 +96,7 @@ pub fn create_taproot_htlc(
         .with_address(network)
         .build()?;
 
-    Ok(config.address)
+    Ok(config)
 }
 
 /// Redeems a Taproot HTLC output by constructing and signing a transaction using the preimage.

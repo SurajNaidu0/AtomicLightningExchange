@@ -265,11 +265,11 @@ async fn run_node_cli(node: Node, role: &str) {
                     let receiver_pubkey = &recipient_pubkey_str.as_str();
                     println!("Payment hash: {}", hash_str);
                     //getting address
-                    let htlc_taproot_address = bitoin_htlc::create_taproot_htlc(hash_str.as_str(), sender_pubkey, receiver_pubkey, block_num_lock,KnownHrp::Testnets,None).expect("Error while creating a address");
+                    let htlc_config = bitoin_htlc::create_taproot_htlc(hash_str.as_str(), sender_pubkey, receiver_pubkey, block_num_lock,KnownHrp::Testnets,None).expect("Error while creating a address");
 
-                    println!("Htlc address is {}", htlc_taproot_address);
+                    println!("Htlc address is {}", htlc_config.address);
 
-                    match node.onchain_payment().send_to_address(&htlc_taproot_address, sats_value) {
+                    match node.onchain_payment().send_to_address(&htlc_config.address, sats_value) {
                         Ok(txid) => println!("On-chain transfer successful. Transaction ID: {}", txid),
                         Err(e) => println!("Error sending on-chain transfer: {:?}", e),
                     }
@@ -385,8 +385,9 @@ async fn run_node_cli(node: Node, role: &str) {
                     Err(e) => println!("Error sending payment from {}: {:?}", role, e)
                 } // Removed comma here
             }
-            (Some("atomicswapsend"), [amount_str, recipient_pubkey_str, sender_refund_publickey, block_num_lock]) => {
+            (Some("atomicswaprefund"), [payment_hash,amount_str, recipient_pubkey_str, sender_refund_publickey, block_num_lock]) => {
                 
+
             }
 
             (Some("exit"), _) => break,
