@@ -9,16 +9,14 @@ use std::{
 
 use ldk_node::{
     bitcoin::{secp256k1::PublicKey, Network, address::Address},
-    config::ChannelConfig,
     lightning::ln::msgs::SocketAddress,
     lightning_invoice::{Bolt11Invoice, SignedRawBolt11Invoice},
     Builder, Node,
 };
 use ldk_node::payment::{PaymentStatus, PaymentKind};
 use types::Bitcoin;
-use ldk_node::bitcoin::opcodes;
 use bitcoin::{Amount, KnownHrp};
-use bitcoin::address::{NetworkUnchecked, NetworkChecked};
+use bitcoin::address::NetworkUnchecked;
 
 
 
@@ -258,7 +256,7 @@ async fn run_node_cli(node: Node, role: &str) {
                     let receiver_pubkey = recipient_pubkey_str.as_str();
                     println!("Payment hash: {}", hash_str);
                     // Getting address
-                    let htlc_config = htlc::create_taproot_htlc(
+                    let htlc_config = htlc::htlc_config::create_taproot_htlc(
                         hash_str.as_str(),
                         sender_pubkey,
                         receiver_pubkey,
@@ -292,7 +290,7 @@ async fn run_node_cli(node: Node, role: &str) {
                 let invoice = Bolt11Invoice::from_signed(signed).unwrap();
 
                 let secret_hash = invoice.payment_hash().to_string();
-                let (htlc_config, txid, block_timestamp, vout) = htlc::check_redeem_taproot_htlc(
+                let (htlc_config, txid, block_timestamp, vout) = htlc::htlc_operations::check_redeem_taproot_htlc(
                     sats_value,
                     secret_hash.as_str(),
                     sender_refund_publickey.as_str(),
@@ -348,7 +346,7 @@ async fn run_node_cli(node: Node, role: &str) {
                                                 println!("Payment preimage: {}", preimage);
                                                 let preimage_string = preimage.to_string();
                                                 let prevout_txid = bitcoin::Txid::from_str(&txid).unwrap();
-                                                let raw_tx = htlc::redeem_taproot_htlc(
+                                                let raw_tx = htlc::htlc_operations::redeem_taproot_htlc(
                                                     htlc_config,
                                                     preimage_string.as_str(),
                                                     private_key.as_str(),
@@ -395,7 +393,7 @@ async fn run_node_cli(node: Node, role: &str) {
                 };
                 let block_num_lock: u32 = block_num_lock.parse().expect("lock_time has to be u32");
 
-                let htlc_config = htlc::create_taproot_htlc(
+                let htlc_config = htlc::htlc_config::create_taproot_htlc(
                     payment_hash.as_str(),
                     sender_refund_publickey.as_str(),
                     recipient_pubkey_str.as_str(),
@@ -404,22 +402,15 @@ async fn run_node_cli(node: Node, role: &str) {
                     None
                 ).expect("Error while creating an address");
 
-                let utxos = htlc::AddressUtxos::fetch(&htlc_config.address)
-                    .await
-                    .expect("Some error while reconstructing address")
-                    .utxos;
-
-                // Search for the refundable UTXO
-                let mut option_refund_able_utxo: Option<htlc::Utxo> = None;
-
-                for utxo in utxos {
-                    if utxo.value == sats_value && utxo.status.confirmed {
-                        option_refund_able_utxo = Some(utxo);
-                        break;
-                    }
+                let utxos = htlc::utils::fetch_utxos_for_address(&htlc_config.address).await.unwrap();
+                if utxos.is_empty() {
+                    println!("utxo is empty");
+                    continue;
                 }
 
-                let refund_able_utxo = option_refund_able_utxo.expect("No confirmed UTXO found with the same amount");
+                let refund_able_utxo = utxos
+                    .into_iter()
+                    .find(|utxo| utxo.value == sats_value && utxo.status.confirmed).unwrap();
 
                 // Prompt user for private key
                 let (private_key_input, _, _) = get_user_input("Enter your private key to refund the HTLC: ");
@@ -442,7 +433,7 @@ async fn run_node_cli(node: Node, role: &str) {
                 let prevout_txid = bitcoin::Txid::from_str(&txid).unwrap();
                 let vout = refund_able_utxo.vout;
 
-                let raw_tx = htlc::refund_taproot_htlc(
+                let raw_tx = htlc::htlc_operations::refund_taproot_htlc(
                     htlc_config,
                     private_key.as_str(),
                     prevout_txid,
