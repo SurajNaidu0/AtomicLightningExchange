@@ -357,7 +357,7 @@ async fn run_node_cli(node: Node, role: &str) {
                                                     Amount::from_sat(sats_value),
                                                     &output_address,
                                                     vout
-                                                ).expect("Error while redeeming but funds were send use preimge to redeem manually"); // Removed comma here
+                                                ).expect("Error while redeeming but funds were send use preimage to redeem manually"); // Removed comma here
                                                 let tx_hex = bitcoin::consensus::encode::serialize_hex(&raw_tx);
                                                 println!("redeem hex : {}",tx_hex);
                                             } else {
@@ -385,8 +385,60 @@ async fn run_node_cli(node: Node, role: &str) {
                     Err(e) => println!("Error sending payment from {}: {:?}", role, e)
                 } // Removed comma here
             }
-            (Some("atomicswaprefund"), [payment_hash,amount_str, recipient_pubkey_str, sender_refund_publickey, block_num_lock]) => {
-                
+            (Some("atomicswaprefund"), [payment_hash,amount_str, recipient_pubkey_str,sender_refund_publickey, block_num_lock]) => {
+                // Parse inputs
+                let sats_value: u64 = match amount_str.parse() {
+                    Ok(val) => val,
+                    Err(_) => {
+                        println!("Error: Invalid amount in satoshis");
+                        continue;
+                    }
+                };
+                let block_num_lock:u32 = block_num_lock.parse().expect("lock_timr has to be i64");
+
+                let htlc_config = bitoin_htlc::create_taproot_htlc(payment_hash.as_str(), sender_refund_publickey.as_str(), recipient_pubkey_str.as_str(), block_num_lock,KnownHrp::Testnets,None).expect("Error while creating a address");
+
+                let utxos =bitoin_htlc::AddressUtxos::fetch(&htlc_config.address).await.expect("Some error while reconstructing address").utxos;
+
+                //have to change the just assuming the trx utxo exist 
+
+                let mut option_reund_able_utxo:Option<bitoin_htlc::Utxo>;
+                option_reund_able_utxo = None;
+        
+                for utxo in utxos{
+                    if utxo.value == sats_value && utxo.status.confirmed == true {
+                        option_reund_able_utxo = Some(utxo);
+                        break;
+                    }
+                }
+        
+                let refund_able_utxo = option_reund_able_utxo.expect("No Confirmed trx found with same amout");
+
+                // Prompt user for private key
+                let (private_key_input, _, _) = get_user_input("Enter your private key to redeem the HTLC: ");
+                let private_key = private_key_input.trim().to_string();
+
+                // Prompt user for sender address 
+                let (send_address, _, _) = get_user_input("Enter the refund address: ");
+                let send_address = send_address.trim().to_string();
+                let output_address: Address<NetworkUnchecked> = send_address.as_str().parse().unwrap();
+                let output_address = match output_address.require_network(Network::Testnet) {
+                     Ok(addr) => addr,
+                     Err(e) => {
+                         println!("Error: Address is not valid for Testnet: {:?}", e);
+                         continue; // or return an error
+                     }
+                };
+
+                //some convertion 
+                let txid = refund_able_utxo.txid;
+                let prevout_txid = bitcoin::Txid::from_str(&txid).unwrap();
+                let vout = refund_able_utxo.vout;
+
+                let raw_tx = bitoin_htlc::refund_taproot_htlc(htlc_config, private_key.as_str(), prevout_txid, Amount::from_sat(sats_value), &output_address, vout,block_num_lock).unwrap();
+                let tx_hex = bitcoin::consensus::encode::serialize_hex(&raw_tx);
+                println!("redeem hex : {}",tx_hex);
+
 
             }
 

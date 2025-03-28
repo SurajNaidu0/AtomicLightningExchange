@@ -25,19 +25,19 @@ use std::io::Error;
 const BLOCK_TIME_SECONDS:u32 = 60;
 
 #[derive(Debug, Serialize, Deserialize)]
-struct UtxoStatus {
-    confirmed: bool,
-    block_height: u32,
-    block_hash: String,
-    block_time: u64,
+pub struct UtxoStatus {
+    pub confirmed: bool,
+    pub block_height: u32,
+    pub block_hash: String,
+    pub block_time: u64,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-struct Utxo {
-    txid: String,
-    vout: u32,
-    status: UtxoStatus,
-    value: u64,
+pub struct Utxo {
+    pub txid: String,
+    pub vout: u32,
+    pub status: UtxoStatus,
+    pub value: u64,
 }
 
 #[derive(Debug)]
@@ -262,7 +262,7 @@ pub async fn check_redeem_taproot_htlc(
         Ok((config,redeem_able_utxo.txid,block_timestamp,redeem_able_utxo.vout))
     }
 
-fn refund_taproot_htlc(htlc_config:ConfigTaprootHTLC,sender_private_key: &str,prev_txid:Txid, refund_amount: Amount,refund_to_address:&Address,vout:u32) -> Option<Transaction> {
+pub fn refund_taproot_htlc(htlc_config:ConfigTaprootHTLC,sender_private_key: &str,prev_txid:Txid, refund_amount: Amount,refund_to_address:&Address,vout:u32,block_num_lock:u32) -> Option<Transaction> {
     let secp = Secp256k1::new();
 
     // Compute Merkle branch for refund path (using redeem leaf as sibling)
@@ -295,12 +295,12 @@ fn refund_taproot_htlc(htlc_config:ConfigTaprootHTLC,sender_private_key: &str,pr
     let input = TxIn {
         previous_output: prevout,
         script_sig: ScriptBuf::new(),
-        sequence: Sequence::from_height(7), // Note: Should reflect timelock in practice
+        sequence: Sequence::from_height(block_num_lock as u16), // Note: Should reflect timelock in practice
         witness: Witness::default(),
     };
 
     let output = TxOut {
-        value: refund_amount-Amount::from_sat(1000), // 0.001 BTC
+        value: refund_amount-Amount::from_sat(200), // 0.001 BTC
         script_pubkey: refund_to_address.script_pubkey(),
     };
 
