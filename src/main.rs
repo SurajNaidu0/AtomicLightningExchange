@@ -20,9 +20,10 @@ use ldk_node::{
 use ldk_node::payment::{PaymentStatus, PaymentKind};
 use types::Bitcoin;
 use ldk_node::bitcoin::opcodes;
-use bitcoin::KnownHrp;
+use bitcoin::{Amount, KnownHrp};
+use bitcoin::address::{NetworkUnchecked, NetworkChecked};
 
-fn make_node(seed: [u8; 64], alias: &str, port: u16) -> ldk_node::Node {
+async fn make_node(seed: [u8; 64], alias: &str, port: u16) -> ldk_node::Node {
     let mut builder = Builder::new();
     builder.set_entropy_seed_bytes(seed.to_vec()).unwrap();
     builder.set_network(Network::Signet);
@@ -59,7 +60,7 @@ fn get_user_input(prompt: &str) -> (String, Option<String>, Vec<String>) {
     (input, command, args)
 }
 
-fn run_node_cli(node: Node, role: &str) {
+async fn run_node_cli(node: Node, role: &str) {
     loop {
         let (input, command, args) = get_user_input(&format!("Enter command for {}: ", role));
 
@@ -263,6 +264,7 @@ fn run_node_cli(node: Node, role: &str) {
                     let sender_pubkey = sender_refund_publickey.as_str();
                     let receiver_pubkey = &recipient_pubkey_str.as_str();
                     println!("Payment hash: {}", hash_str);
+                    //getting address
                     let htlc_taproot_address = bitoin_htlc::create_taproot_htlc(hash_str.as_str(), sender_pubkey, receiver_pubkey, block_num_lock,KnownHrp::Testnets,None).expect("Error while creating a address");
 
                     println!("Htlc address is {}", htlc_taproot_address);
@@ -275,8 +277,7 @@ fn run_node_cli(node: Node, role: &str) {
                     println!("No payment hash was created.");
                 }
             }
-            (Some("atomicswapredeem"), [invoice ,amount_str, recipient_pubkey_str, sender_refund_publickey, block_num_lock]) => {
-
+            (Some("atomicswapredeem"), [invoice, amount_str, recipient_pubkey_str, sender_refund_publickey, block_num_lock]) => {
                 let sats_value: u64 = match amount_str.parse() {
                     Ok(val) => val,
                     Err(_) => {
@@ -284,16 +285,110 @@ fn run_node_cli(node: Node, role: &str) {
                         continue;
                     }
                 };
-
+            
+                let block_num_lock: u32 = block_num_lock.parse().expect("lock_time has to be i64");
+            
                 let signed = invoice.parse::<SignedRawBolt11Invoice>().unwrap();
-                let inovice = Bolt11Invoice::from_signed(signed).unwrap();
-
-                
-
-
-
-
+                let invoice = Bolt11Invoice::from_signed(signed).unwrap();
+            
+                let secret_hash = invoice.payment_hash().to_string();
+                let (htlc_config, txid, block_timestamp, vout) = bitoin_htlc::check_redeem_taproot_htlc(
+                    sats_value,
+                    secret_hash.as_str(),
+                    sender_refund_publickey.as_str(),
+                    recipient_pubkey_str.as_str(),
+                    block_num_lock,
+                    KnownHrp::Testnets,
+                    None
+                ).await.expect("Error in creating config");
+            
+                println!("Found the HTLC transaction ID on the chain: {} and verified its legitimacy.", txid);
+            
+                // Prompt user to continue with redemption
+                let (continue_input, _, _) = get_user_input("Do you want to continue redeeming the HTLC? (yes/no): ");
+                if continue_input.trim().to_lowercase() != "yes" {
+                    println!("Redemption aborted by user.");
+                    continue;
+                }
+            
+                // Prompt user for private key
+                let (private_key_input, _, _) = get_user_input("Enter your private key to redeem the HTLC: ");
+                let private_key = private_key_input.trim().to_string();
+            
+                // Prompt user for sender address 
+                let (send_address, _, _) = get_user_input("Enter the redeem address: ");
+                let send_address = send_address.trim().to_string();
+                let output_address: Address<NetworkUnchecked> = send_address.as_str().parse().unwrap();
+                let output_address = match output_address.require_network(Network::Testnet) {
+                    Ok(addr) => addr,
+                    Err(e) => {
+                        println!("Error: Address is not valid for Testnet: {:?}", e);
+                        continue; // or return an error
+                    }
+                };
+            
+                match node.bolt11_payment().send(&invoice, None) {
+                    Ok(payment_id) => {
+                        println!("Payment sent from {} with payment_id: {}", role, payment_id);
+                        println!("Waiting for payment to complete...");
+                        let start_time = Instant::now();
+                        let timeout = Duration::from_secs(30);
+            
+                        loop {
+                            if start_time.elapsed() > timeout {
+                                println!("Timeout waiting for payment to complete");
+                                break;
+                            }
+                            match node.payment(&payment_id) {
+                                Some(payment) => match payment.status {
+                                    PaymentStatus::Succeeded => {
+                                        println!("Payment succeeded!");
+                                        if let PaymentKind::Bolt11 { preimage, .. } = payment.kind {
+                                            // Reveal PaymentPreimage if available
+                                            if let Some(preimage) = preimage {
+                                                println!("Payment preimage: {}", preimage);
+                                                let preimage_string = preimage.to_string();
+                                                let prevout_txid = bitcoin::Txid::from_str(&txid).unwrap();
+                                                let raw_tx =bitoin_htlc::redeem_taproot_htlc(
+                                                    htlc_config,
+                                                    preimage_string.as_str(),
+                                                    private_key.as_str(),
+                                                    prevout_txid,
+                                                    Amount::from_sat(sats_value),
+                                                    &output_address,
+                                                    vout
+                                                ).expect("Error while redeeming but funds were send use preimge to redeem manually"); // Removed comma here
+                                                let tx_hex = bitcoin::consensus::encode::serialize_hex(&raw_tx);
+                                                println!("redeem hex : {}",tx_hex);
+                                            } else {
+                                                println!("No preimage available");
+                                            }
+                                        }
+                                        break;
+                                    }
+                                    PaymentStatus::Failed => {
+                                        println!("Payment failed");
+                                        break;
+                                    }
+                                    PaymentStatus::Pending => {
+                                        println!("Payment still pending...");
+                                        std::thread::sleep(Duration::from_millis(500));
+                                    }
+                                },
+                                None => {
+                                    println!("Payment not found");
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    Err(e) => println!("Error sending payment from {}: {:?}", role, e)
+                } // Removed comma here
             }
+            (Some("atomicswapsend"), [amount_str, recipient_pubkey_str, sender_refund_publickey, block_num_lock]) => {
+                
+            }
+
             (Some("exit"), _) => break,
             _ => println!("Unknown command or incorrect arguments: {}", input),
         }
@@ -301,18 +396,19 @@ fn run_node_cli(node: Node, role: &str) {
 
 }
 
-fn main() {
+#[tokio::main]  // Add this attribute to make main async
+async fn main() {  // Change fn main() to async fn main()
     println!("Hello, world!");
     #[cfg(feature = "alice")]
     {
         let seed: [u8; 64] = [255, 232, 2, 49, 170, 219, 110, 2, 166, 115, 242, 99, 7, 199, 80, 230, 23, 7, 167, 123, 130, 68, 101, 17, 37, 141, 176, 251, 173, 101, 120, 131, 168, 106, 244, 208, 119, 178, 74, 203, 192, 61, 244, 217, 182, 197, 137, 14, 8, 101, 228, 194, 242, 61, 208, 169, 33, 202, 132, 24, 84, 112, 234, 135];
-        let node = make_node(seed, "Alice", 9000);
-        run_node_cli(node, "User");
+        let node = make_node(seed, "Alice", 9000).await;  // Add .await here
+        run_node_cli(node, "User").await;  // Add .await here since run_node_cli is async
     }
     #[cfg(feature = "bob")]
     {
         let seed = [189, 147, 230, 36, 129, 64, 32, 57, 86, 203, 182, 103, 156, 178, 15, 136, 24, 238, 99, 52, 146, 59, 24, 223, 55, 50, 181, 192, 127, 222, 181, 103, 197, 195, 5, 147, 4, 4, 112, 197, 170, 68, 29, 66, 42, 250, 122, 25, 202, 227, 136, 55, 86, 249, 160, 146, 128, 140, 170, 97, 250, 170, 247, 5];
-        let node = make_node(seed, "Bob", 9001);
-        run_node_cli(node, "LSP");
+        let node = make_node(seed, "Bob", 9001).await;  // Add .await here
+        run_node_cli(node, "LSP").await;  // Add .await here
     }
 }

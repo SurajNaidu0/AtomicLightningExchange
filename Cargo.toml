@@ -21,3 +21,4 @@ async-trait = "0.1"
 hex = "0.4.3"
 rand = "0.8.5"
 reqwest = { version = "0.11", features = ["json", "blocking"] }
+tokio = { version = "1", features = ["full"] }
