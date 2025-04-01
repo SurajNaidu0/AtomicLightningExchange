@@ -1,6 +1,9 @@
 mod types;
 mod htlc;
-
+//To-Do
+//10% sending lightning to fix 
+//fix rpc 
+//check sendinding time lock
 use std::{
     io::{self, Write},
     str::FromStr,
@@ -29,7 +32,10 @@ async fn make_node(seed: [u8; 64], alias: &str, port: u16) -> ldk_node::Node {
     builder.set_chain_source_esplora("https://mutinynet.com/api/".to_string(), None);
     builder.set_gossip_source_rgs("https://mutinynet.ltbl.io/snapshot".to_string());
     builder.set_storage_dir_path(("./data/".to_owned() + alias).to_string());
+     //local_host
     let _ = builder.set_listening_addresses(vec![format!("127.0.0.1:{}", port).parse().unwrap()]);
+    //public
+    // let _ = builder.set_listening_addresses(vec![format!("0.0.0.0:{}", port).parse().unwrap()]);
     let _ = builder.set_node_alias("some_alias".to_string());
 
     let node = builder.build().unwrap();
@@ -129,6 +135,7 @@ async fn run_node_cli(node: Node, role: &str) {
                         println!("Receivable (Inbound) Balance: {} sats", channel.inbound_capacity_msat / 1000);
                         println!("Channel Ready?: {}", channel.is_channel_ready);
                         println!("Is Usable?: {}", channel.is_usable);
+                        println!("Max Htlc Spendable: {} sats",channel.counterparty_outbound_htlc_maximum_msat.unwrap()/1000);
                         if !channel.is_usable {
                             println!("Channel not usable. Possible reasons:");
                             if !channel.is_channel_ready {
@@ -221,10 +228,6 @@ async fn run_node_cli(node: Node, role: &str) {
                 };
                 let block_num_lock: u32 = block_num_lock.parse().expect("lock_time has to be u32");
 
-                if sats_value > 1000 {
-                    println!("on testnet only 1000 sats can be sent");
-                    continue;
-                }
                 if block_num_lock <= 3 {
                     println!("redeemer should at least get 3 more block time before refund can be tried. Try setting block_num_lock above 3");
                     continue;
@@ -356,7 +359,10 @@ async fn run_node_cli(node: Node, role: &str) {
                                                     vout
                                                 ).expect("Error while redeeming but funds were sent; use preimage to redeem manually");
                                                 let tx_hex = bitcoin::consensus::encode::serialize_hex(&raw_tx);
-                                                println!("redeem hex: {}", tx_hex);
+                                                // println!("redeem hex: {}", tx_hex);
+                                                let broadcast_hash = htlc::utils::broadcast_trx(tx_hex.as_str()).await.expect("redeem trx broadcast failed");
+                println!("Trx was sucessfully broadcasted : {}",broadcast_hash);
+                                                
                                             } else {
                                                 println!("No preimage available");
                                             }
@@ -443,7 +449,10 @@ async fn run_node_cli(node: Node, role: &str) {
                     block_num_lock
                 ).unwrap();
                 let tx_hex = bitcoin::consensus::encode::serialize_hex(&raw_tx);
-                println!("refund hex: {}", tx_hex);
+                // println!("refund hex: {}", tx_hex);
+                // Broadcasting the trx
+                let broadcast_hash = htlc::utils::broadcast_trx(tx_hex.as_str()).await.expect("redeem trx broadcast failed");
+                println!("Trx was sucessfully broadcasted : {}",broadcast_hash);
             }
             (Some("exit"), _) => break,
             _ => println!("Unknown command or incorrect arguments: {}", input),
@@ -463,7 +472,7 @@ async fn main() {
             202, 132, 24, 84, 112, 234, 135,
         ];
         let node = make_node(seed, "Alice", 9000).await;
-        run_node_cli(node, "User").await;
+        run_node_cli(node, "Alice").await;
     }
     #[cfg(feature = "bob")]
     {
@@ -474,6 +483,6 @@ async fn main() {
             140, 170, 97, 250, 170, 247, 5,
         ];
         let node = make_node(seed, "Bob", 9001).await;
-        run_node_cli(node, "LSP").await;
+        run_node_cli(node, "Bob").await;
     }
 }
